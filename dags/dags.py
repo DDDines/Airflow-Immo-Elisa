@@ -29,14 +29,14 @@ dag = DAG(
 
 clean = BashOperator(
     task_id='clean',
-    bash_command='python /opt/airflow/dags/immo-eliza-scraper/clean.py',
+    bash_command='python /opt/airflow/plugins/immo-eliza-scraper/clean.py',
     dag=dag,
 )
 
 
 scrape_task2 = BashOperator(
     task_id='scrape_task2',
-    bash_command='python /opt/airflow/dags/immo-eliza-scraper/main.py',
+    bash_command='python /opt/airflow/plugins/immo-eliza-scraper/main.py',
     dag=dag,
 )
 
