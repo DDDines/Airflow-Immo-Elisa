@@ -20,7 +20,7 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: g0wqzKTjcD3m3XibxQTWRs0qPESB6QNECgmlQMXMGMM=
+      AIRFLOW__CORE__FERNET_KEY: doPBqzrdTCS2B6fiDirKPpZwK3lMnliIUEya9Cgkolo
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__WEBSERVER__SECRET_KEY: super_secret_key
     ports:
@@ -39,11 +39,12 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: g0wqzKTjcD3m3XibxQTWRs0qPESB6QNECgmlQMXMGMM=
+      AIRFLOW__CORE__FERNET_KEY: doPBqzrdTCS2B6fiDirKPpZwK3lMnliIUEya9Cgkolo
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+
     command: scheduler
 
 volumes:

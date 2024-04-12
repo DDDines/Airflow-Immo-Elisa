@@ -12,7 +12,7 @@ def train():
     
     if 'AIRFLOW_HOME' in os.environ:
         # Ambiente do Airflow
-        base_directory = os.path.join(os.environ['AIRFLOW_HOME'], 'dags', 'immo-eliza-scraper')
+        base_directory = os.path.join(os.environ['AIRFLOW_HOME'], 'plugins', 'immo-eliza-scraper')
     else:
         # Ambiente local
         base_directory = os.path.join('C:', os.sep, 'Users', 'Julio', 'Desktop', 'BXL-Bouman-7', 'projects', '08-DE-immo-eliza-airflow', 'Airflow', 'dags', 'immo-eliza-scraper')
